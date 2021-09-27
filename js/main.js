@@ -3,7 +3,7 @@ var inputN = document.getElementById("p_Name"),
     inputC = document.getElementById("p_Cat"),
     inputD = document.getElementById("p_Desc");
 
-var myStore = [];
+var myStore;
 
 if ( localStorage.getItem("myStoreStorge") == null){
   myStore = [];
@@ -12,16 +12,6 @@ else{
   myStore = JSON.parse(localStorage.getItem("myStoreStorge"));
   displayProduct()
 }
-
-
-// function test(){
-//   if (Number(document.getElementById("p_Price").value) == true){
-//     console.log(true);
-//   }else{
-//     console.log(false);
-//   }
-// }
-
 
 
 function addProduct(){
@@ -41,7 +31,7 @@ function addProduct(){
     
       clearData()
     }else{
-      alert("Sorry...");
+      alert("All Inputs Must Be Required");
     }
 }
 
@@ -124,41 +114,4 @@ function searchProduct(Product = ``){
   }
     document.getElementById("tBody").innerHTML = cartona;
 }
-
-
-searchProduct()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
